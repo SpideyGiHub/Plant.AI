@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:plantai_main/widgets/custom_button.dart';
+import 'package:plantai_main/widgets/green_color_btn.dart';
 
 void main() {
   runApp(
@@ -16,6 +18,8 @@ class ProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xFF6A994E),
+        foregroundColor: Colors.white,
         title: const Text('Profile'),
         actions: [
           IconButton(
@@ -37,45 +41,52 @@ class ProfilePage extends StatelessWidget {
             ),
             const SizedBox(height: 20.0),
             const Text(
-              'Elon Musk',
-              style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
+              'John Doe',
+              style: TextStyle(
+                  fontSize: 24.0,
+                  color: Color(0xFF386641),
+                  fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10.0),
             const Text(
-              'Developer',
-              style: TextStyle(fontSize: 18.0, color: Colors.grey),
+              'Farmer',
+              style: TextStyle(
+                  fontSize: 18.0,
+                  color: Color(0xFF386641),
+                  fontWeight: FontWeight.w400),
             ),
             const SizedBox(height: 20.0),
-            ElevatedButton(
+            GreenOutlinedButton(
               onPressed: () {
                 // Handle edit profile button press
               },
-              style: ElevatedButton.styleFrom(
-                padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
-              ),
-              child: const Text(
-                'Edit Profile',
-                style: TextStyle(fontSize: 18),
-              ),
+              text: 'Edit Profile',
+              icon: Icons.edit,
             ),
             const SizedBox(height: 20.0),
             ListTile(
-              leading: const Icon(Icons.email),
-              title: const Text('john.doe@example.com'),
+              leading: const Icon(Icons.email, color: Color(0xFF386641)),
+              title: const Text('john.doe@example.com',
+                  style: TextStyle(
+                      color: Color(0xFF386641), fontWeight: FontWeight.w400)),
               onTap: () {
                 // Add functionality to email tile
               },
             ),
             ListTile(
-              leading: const Icon(Icons.phone),
-              title: const Text('+91 1234567890'),
+              leading: const Icon(Icons.phone, color: Color(0xFF386641)),
+              title: const Text('+91 1234567890',
+                  style: TextStyle(
+                      color: Color(0xFF386641), fontWeight: FontWeight.w400)),
               onTap: () {
                 // Add functionality to phone tile
               },
             ),
             ListTile(
-              leading: const Icon(Icons.location_on),
-              title: const Text('Mumbai, INDIA'),
+              leading: const Icon(Icons.location_on, color: Color(0xFF386641)),
+              title: const Text('Mumbai, INDIA',
+                  style: TextStyle(
+                      color: Color(0xFF386641), fontWeight: FontWeight.w400)),
               onTap: () {
                 // Add functionality to location tile
               },

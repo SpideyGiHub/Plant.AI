@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class GreenOutlinedButton extends StatelessWidget {
+class GreenButton extends StatelessWidget {
   final String text;
   final IconData icon;
   final VoidCallback onPressed;
 
-  const GreenOutlinedButton({
+  const GreenButton({
     Key? key,
     required this.text,
     required this.icon,
@@ -14,11 +14,7 @@ class GreenOutlinedButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double screenWidth = MediaQuery.of(context).size.width;
-    double buttonWidth = screenWidth * 0.8; // 80% of screen width
-
     return SizedBox(
-      width: buttonWidth,
       child: OutlinedButton(
         onPressed: onPressed,
         style: OutlinedButton.styleFrom(
